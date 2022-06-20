@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>Get a FizzBuzz Result !</h2>
+        Type a number: <input type="number" id="number">
+        <button type="button" onclick="myFunction()">Click here!</button>
+        <p id="result"></p>
+    </center>
+
+    <script>
+        let x = [];
+
+        function myFunction() {
+            let number = document.getElementById("number").value;
+            if (number == 0) {
+                document.getElementById("result").innerHTML = "invalid input";
+            } else {
+                if (x.length == 0) {
+                    x.push(number);
+                    document.getElementById("result").innerHTML = number;
+                } else {
+                    if (number % 3 == 0) {
+                        document.getElementById("result").innerHTML = "Buzz!";
+                    } else if (number % 5 == 0) {
+                        document.getElementById("result").innerHTML = "Fizz!";
+                    } else {
+                        document.getElementById("result").innerHTML = "FizzBuzz!";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
